@@ -4,7 +4,7 @@ export const configuration = {
     failedActionType: null, // requires an action {type: ACTION, ...otherProps}
 }
 
-export const store = null;
+export let store = null;
 
  const configureWatcher = (options) => {
    if(typeof options !== 'object'){
@@ -15,12 +15,12 @@ export const store = null;
        store = options.store;
    }
 
-   if(option.successActionType){
-     configuration.successActionType = option.successActionType ;
+   if(options.successActionType){
+     configuration.successActionType = options.successActionType ;
    }
 
-   if(option.failedActionType){
-     configuration.failedActionType = option.failedActionType;
+   if(options.failedActionType){
+     configuration.failedActionType = options.failedActionType;
    }
 }
 

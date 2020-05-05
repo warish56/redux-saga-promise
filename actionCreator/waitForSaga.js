@@ -1,7 +1,7 @@
 
 import {store} from '../config'
 
-export const waitForSagaAction = ({type, callback, ...otherProps}) => {
+ const waitForSagaAction = ({type, callback, ...otherProps}) => {
    
   return new Promise((resolve, reject) => {
 
@@ -37,3 +37,5 @@ export const waitForSagaAction = ({type, callback, ...otherProps}) => {
     store.dispatch({type, ...otherProps, callback:callbackFunction});
   })
 }
+
+export default waitForSagaAction;

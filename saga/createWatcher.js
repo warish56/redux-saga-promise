@@ -21,7 +21,7 @@ const generateErrorAction = (type,error,isForced) => {
   
     const  successListner = (recivedType,callback) =>{
   
-      return function* success(data, options={ type:'', moreAction='' }){
+      return function* success(data, options={ type:'', moreAction:'' }){
          /**
          * @Params
          * data: an object 

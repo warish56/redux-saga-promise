@@ -1,14 +1,13 @@
-import {waitForSagaAction} from './actionCreator/waitForSaga'
-import createWatchers from './saga/createWatcher'
+import waitForSagaActions from './actionCreator/waitForSaga'
+import createWatcher from './saga/createWatcher'
 import configureWatcher from './config'
 
 
-const root = {
-    waitForSagaAction,
-    createWatchers,
-    configureWatcher
-}
+export const createWatchers = createWatcher;
+export const configureWatchers = configureWatcher;
+export const waitForSagaAction = waitForSagaActions;
 
-export default root;
+
+
 
 
