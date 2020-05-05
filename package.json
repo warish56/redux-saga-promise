@@ -1,5 +1,5 @@
 {
-  "name": "redux-saga-promise",
+  "name": "redux-saga-promises",
   "version": "1.0.0",
   "description": "",
   "private": false,
@@ -7,15 +7,10 @@
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/warish56/redux-saga-promise"
-  },
-  "babel": {
-    "presets": [
-      "@babel/react"
-    ]
+    "url": "https://github.com/warish56/redux-saga-promises"
   },
   "scripts": {
-    "publish:npm": "NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/actionCreator --out-dir dist/actionCreator --copy-files && npx babel src/saga --out-dir dist/saga --copy-files && npx babel src/config.js --out-dir dist/config.js --copy-files && npx babel src/index.js --out-dir dist/index.js --copy-files",
+    "publish:npm": "NODE_ENV=production && rm -rf dist && mkdir dist && npx babel ./actionCreator --out-dir dist/actionCreator --copy-files && npx babel ./saga --out-dir dist/saga --copy-files && npx babel ./config.js --out-dir dist/ --copy-files && npx babel ./index.js --out-dir dist/ --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Md Warish Ali Ansari",
@@ -24,5 +19,9 @@
     "add": "^2.0.6",
     "redux-saga": "^1.1.3",
     "yarn": "^1.22.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6"
   }
 }
